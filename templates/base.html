@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snap.store</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body class="bg-white text-black font-sans">
+    <header class="p-4 border-b border-gray-200 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">snap.store</h1>
+        <nav>
+            <a href="/" class="px-4 hover:text-gray-500">Головна</a>
+            <a href="#" class="px-4 hover:text-gray-500">Каталог</a>
+            <a href="#" class="px-4 hover:text-gray-500">Контакти</a>
+        </nav>
+    </header>
+
+    <main class="p-6">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="p-4 border-t border-gray-200 text-center text-gray-500">
+        © 2025 snap.store
+    </footer>
+</body>
+</html>
