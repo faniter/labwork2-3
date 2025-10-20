@@ -1,0 +1,66 @@
+{% extends "base.html" %} 
+{% block title %}Головна - Світ Кросівок{% endblock %} 
+
+{% block content %}
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-12">
+    <div>
+        <h1 class="text-4xl font-bold mb-4">Найкращий Вибір Кросівок Тут</h1>
+        <p class="text-lg text-gray-700">
+            Відкрийте для себе найновіші моделі від провідних брендів. 
+            Ми пропонуємо широкий вибір кросівок для спорту, відпочинку 
+            та повсякденного стилю. Знайдіть свою ідеальну пару вже сьогодні!
+        </p>
+    </div>
+    <div>
+        <img
+            src="https://zhmerynka.city/upload/article/o_1idibu6rk1mgu1sm1ashpjp16be3m.JPG"
+            alt="Колекція кросівок"
+            class="w-full rounded-lg shadow-md"
+        />
+    </div>
+</div>
+
+<h2 class="text-3xl font-bold mb-6 text-center">Популярні Категорії</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="https://imgproxy.cdn-tinkoff.ru/t_device_1920_x2/aHR0cHM6Ly9wdWJsaWMtc3RhdGljLnRpbmtvZmZqb3VybmFsLnJ1L2RvbHlhbWUvdXBsb2Fkcy8yMDI1LzA0L3FIcVZqOElkLWNvdmVyLWgucG5n" alt="Бігові кросівки" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h3 class="font-bold text-xl mb-2">Для Бігу</h3>
+            <p class="text-gray-600">Легкість та амортизація для ваших рекордів.</p>
+        </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="https://img.joomcdn.net/d31c53bd95c49e3794030aeaf1872e392e889191_1024_1024.jpeg" alt="Лайфстайл кросівки" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h3 class="font-bold text-xl mb-2">Лайфстайл</h3>
+            <p class="text-gray-600">Стиль та комфорт на кожен день.</p>
+        </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="https://s.6264.com.ua/section/promonewsintext/upload/images/promo/intext/000/051/384/krosipng_5db97aadb2edb.jpg" alt="Баскетбольні кросівки" class="w-full h-48 object-cover">
+        <div class="p-4">
+            <h3 class="font-bold text-xl mb-2">Для Баскетболу</h3>
+            <p class="text-gray-600">Найкраща фіксація та зчеплення.</p>
+        </div>
+    </div>
+</div>
+
+<h2 class="text-3xl font-bold mb-6 text-center">Чому Обирають Нас?</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+    <div>
+        <img
+            src="https://blog.allo.ua/wp-content/uploads/2020/02/kak-vybrat-zhenskie-krossovki.jpeg"
+            alt="Якісні кросівки"
+            class="w-full rounded-lg shadow-md"
+        />
+    </div>
+    <div>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
+            <li><strong>100% Оригінальна продукція:</strong> Ми працюємо лише з офіційними постачальниками.</li>
+            <li><strong>Швидка доставка:</strong> Доставка по всій Україні за 1-3 дні.</li>
+            <li><strong>Підтримка 24/7:</strong> Наші менеджери завжди готові допомогти вам з вибором.</li>
+            <li><strong>Гарантія якості:</strong> Можливість повернення та обміну товару.</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
