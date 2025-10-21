@@ -20,30 +20,20 @@
     </div>
 </div>
 
-<h2 class="text-3xl font-bold mb-6 text-center">Популярні Категорії</h2>
+<h2 class="text-3xl font-bold mb-6 text-center">Наш Каталог</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    
+    {% for sneaker in sneakers %}
     <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
-        <img src="https://imgproxy.cdn-tinkoff.ru/t_device_1920_x2/aHR0cHM6Ly9wdWJsaWMtc3RhdGljLnRpbmtvZmZqb3VybmFsLnJ1L2RvbHlhbWUvdXBsb2Fkcy8yMDI1LzA0L3FIcVZqOElkLWNvdmVyLWgucG5n" alt="Бігові кросівки" class="w-full h-48 object-cover">
+        <img src="{{ sneaker.image_url }}" alt="{{ sneaker.name }}" class="w-full h-48 object-cover">
         <div class="p-4">
-            <h3 class="font-bold text-xl mb-2">Для Бігу</h3>
-            <p class="text-gray-600">Легкість та амортизація для ваших рекордів.</p>
+            <h3 class="font-bold text-xl mb-2">{{ sneaker.name }}</h3>
+            <p class="text-gray-600 mb-2">{{ sneaker.description }}</p>
+            <p class="text-xl font-bold text-gray-900">{{ sneaker.price }} грн</p>
         </div>
     </div>
-    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
-        <img src="https://img.joomcdn.net/d31c53bd95c49e3794030aeaf1872e392e889191_1024_1024.jpeg" alt="Лайфстайл кросівки" class="w-full h-48 object-cover">
-        <div class="p-4">
-            <h3 class="font-bold text-xl mb-2">Лайфстайл</h3>
-            <p class="text-gray-600">Стиль та комфорт на кожен день.</p>
-        </div>
+    {% endfor %}
     </div>
-    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
-        <img src="https://s.6264.com.ua/section/promonewsintext/upload/images/promo/intext/000/051/384/krosipng_5db97aadb2edb.jpg" alt="Баскетбольні кросівки" class="w-full h-48 object-cover">
-        <div class="p-4">
-            <h3 class="font-bold text-xl mb-2">Для Баскетболу</h3>
-            <p class="text-gray-600">Найкраща фіксація та зчеплення.</p>
-        </div>
-    </div>
-</div>
 
 <h2 class="text-3xl font-bold mb-6 text-center">Чому Обирають Нас?</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
