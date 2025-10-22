@@ -15,17 +15,15 @@ init_db()
 # 2. Створюємо сам додаток Flask
 app = Flask(__name__)
 
-# 3. Реєструємо наші маршрути (сторінки)
-# Це каже Flask: "Візьми всі маршрути з файлу routes/shop.py"
+# 3. ДОДАНО: Секретний ключ для сесій (кошика)
+# Змініть це на будь-який випадковий набір символів!
+app.config['SECRET_KEY'] = 'your-very-secret-random-key-12345' 
+
+# 4. Реєструємо наші маршрути (сторінки)
 app.register_blueprint(shop_bp) 
-
-# Це каже Flask: "Візьми всі маршрути з routes/admin.py
-# і зроби так, щоб вони починалися з /admin"
 app.register_blueprint(admin_bp, url_prefix='/admin') 
-
-# Це каже Flask: "Візьми всі маршрути з routes/feedback.py"
 app.register_blueprint(feedback_bp) 
 
-# 4. Запускаємо додаток, якщо цей файл запустили напряму
+# 5. Запускаємо додаток
 if __name__ == '__main__':
     app.run(debug=True)
