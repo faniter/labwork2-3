@@ -13,7 +13,7 @@ def init_db():
     conn = get_db_conn()
     cursor = conn.cursor()
 
-    # 1. Створюємо таблицю 'categories'
+
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS categories (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -21,8 +21,8 @@ def init_db():
     )
     ''')
 
-    # 2. ОНОВЛЕНО: Додаємо 'category_id' до 'sneakers'
-    # 'FOREIGN KEY' створює зв'язок
+    
+ 
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS sneakers (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -35,7 +35,7 @@ def init_db():
     )
     ''')
 
-    # 3. Таблиця 'feedback' (без змін)
+   
     cursor.execute('''
     CREATE TABLE IF NOT EXISTS feedback (
         id INTEGER PRIMARY KEY AUTOINCREMENT,

@@ -6,14 +6,14 @@ from models import get_db_conn
 
 shop_bp = Blueprint('shop', __name__)
 
-# Ця функція завантажує категорії перед кожним запитом
+
 @shop_bp.before_request
 def load_categories():
     conn = get_db_conn()
     g.categories = conn.execute('SELECT * FROM categories ORDER BY name').fetchall()
     conn.close()
 
-# --- Маршрути Магазину ---
+
 
 @shop_bp.route('/')
 def home():
@@ -45,7 +45,7 @@ def category_view(category_id):
     
     return render_template('home.html', sneakers=sneakers_rows, category_name=category_name)
 
-# --- РІВЕНЬ 3: Пошук ---
+
 
 @shop_bp.route('/search')
 def search():
@@ -62,7 +62,7 @@ def search():
     
     return render_template('home.html', sneakers=search_results, search_query=query)
 
-# --- РІВЕНЬ 3: Кошик ---
+
 
 @shop_bp.route('/cart/add/<int:sneaker_id>', methods=['POST'])
 def add_to_cart(sneaker_id):
@@ -73,7 +73,7 @@ def add_to_cart(sneaker_id):
     
     session['cart'] = cart
     
-    # Повертаємо користувача на ту сторінку, з якої він прийшов
+    
     return redirect(request.referrer or url_for('shop.home'))
 
 @shop_bp.route('/cart')

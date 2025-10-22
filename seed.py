@@ -4,7 +4,7 @@ conn = sqlite3.connect('db.sqlite')
 cursor = conn.cursor()
 
 print("Очищення старих даних (якщо є)...")
-# Видаляємо, щоб уникнути дублікатів при повторному запуску
+
 cursor.execute('DELETE FROM sneakers')
 cursor.execute('DELETE FROM categories')
 
@@ -13,11 +13,11 @@ try:
     cursor.execute("INSERT INTO categories (name) VALUES ('Для Бігу')")
     cursor.execute("INSERT INTO categories (name) VALUES ('Лайфстайл')")
     cursor.execute("INSERT INTO categories (name) VALUES ('Для Баскетболу')")
-    conn.commit() # Зберігаємо категорії
+    conn.commit() 
 except sqlite3.IntegrityError:
     print("Категорії вже існують.")
 
-# Отримуємо ID щойно створених категорій
+
 cat_run_id = cursor.execute("SELECT id FROM categories WHERE name = 'Для Бігу'").fetchone()[0]
 cat_life_id = cursor.execute("SELECT id FROM categories WHERE name = 'Лайфстайл'").fetchone()[0]
 
@@ -47,7 +47,7 @@ try:
                     cat_run_id)
                   )
 
-    conn.commit() # Зберігаємо товари
+    conn.commit() 
     print("Товари та категорії успішно додано!")
 
 except sqlite3.Error as e:
